@@ -469,3 +469,32 @@ h1, h2, h3 {
 .submit-btn:hover { background: #e0ff33; }
 .status-msg { margin-top: 2rem; padding: 1rem; border: 1px solid currentColor; text-align: center; }
 
+
+html, body {
+    touch-action: pan-x pan-y;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+   
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    img, canvas, svg, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
