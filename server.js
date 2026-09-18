@@ -16,15 +16,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serwowanie plików statycznych
+
 app.use(express.static(__dirname));
 
-// Endpoint frontend
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Endpoint formularza kontaktowego B2B
 app.post('/api/quote', (req, res) => {
     const { name, email, details } = req.body;
     
@@ -39,7 +38,7 @@ app.post('/api/quote', (req, res) => {
 
     const trackingId = `0X-${Math.floor(Math.random() * 1000000).toString().padStart(6, '0')}`;
     
-    // W rzeczywistości tu by się wysyłał e-mail (np. Nodemailer) lub zapis do bazy.
+    // W rzeczywistości tu by się wysyłał e-mail ale to tylko szkic
     
     return res.status(200).json({ 
         message: 'ZAPYTANIE WPROWADZONE DO SYSTEMU. TRWA ANALIZA TECHNOLOGICZNA.', 
