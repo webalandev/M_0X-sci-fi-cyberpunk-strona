@@ -1,0 +1,16 @@
+{
+  "name": "manufaktura-0x",
+  "version": "1.0.0",
+  "description": "Zaawansowana obróbka CNC - funkcjonalna platforma B2B",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "dotenv": "^17.2.3",
+    "cors": "^2.8.5"
+  }
+}
